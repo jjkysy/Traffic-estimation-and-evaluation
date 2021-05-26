@@ -1,6 +1,6 @@
 function:
 
-Online simulation and evaluation by SUMO of a express way with on-ramp
+Online simulation and evaluation by SUMO of an express way with on-ramp
 1. traffic context is fixed
 2. able to turn on and off a ramp-metering feed back control 'ALINEA'
 3. able to plot: speed-contour plot, fundamental diagram, demand plot
