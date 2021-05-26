@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 02/16/20 19:04:48 by Eclipse SUMO netedit Version 1.4.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="data/merge.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="data/merge.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="true"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <visualisation>
+        <registry-viewport value="true"/>
+    </visualisation>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<net version="1.3" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="-3000.00,-500.00,7750.00,0.00" origBoundary="0.00,0.00,1000.00,1000.00" projParameter="!"/>
+
+    <edge id="l0" from="0" to="1" priority="-1">
+        <lane id="l0_0" index="0" speed="50.00" length="3000.00" shape="-3000.00,-1.60 0.00,-1.60"/>
+    </edge>
+    <edge id="l1" from="1" to="2" priority="-1">
+        <lane id="l1_0" index="0" speed="50.00" length="5000.00" shape="0.00,-1.60 5000.00,-1.60"/>
+    </edge>
+    <edge id="l2" from="2" to="4" priority="-1" spreadType="center">
+        <lane id="l2_0" index="0" speed="50.00" length="250.00" shape="5000.00,-1.60 5250.00,-1.60"/>
+        <lane id="l2_1" index="1" speed="50.00" length="250.00" shape="5000.00,1.60 5250.00,1.60"/>
+    </edge>
+    <edge id="l3" from="4" to="5" priority="-1">
+        <lane id="l3_0" index="0" speed="50.00" length="2500.00" shape="5250.00,-1.60 7750.00,-1.60"/>
+    </edge>
+    <edge id="lm" from="3" to="2" priority="-1">
+        <lane id="lm_0" index="0" speed="50.00" length="1581.14" shape="3500.51,-501.52 5000.51,-1.52"/>
+    </edge>
+
+    <tlLogic id="2" type="static" programID="0" offset="0">
+        <phase duration="10" state="rG"/>
+        <phase duration="3"  state="yG"/>
+        <phase duration="44" state="GG"/>
+        <phase duration="3"  state="yG"/>
+    </tlLogic>
+    <tlLogic id="4" type="static" programID="0" offset="0">
+        <phase duration="85" state="rG"/>
+    </tlLogic>
+
+    <junction id="0" type="dead_end" x="-3000.00" y="0.00" incLanes="" intLanes="" shape="-3000.00,0.00 -3000.00,-3.20"/>
+    <junction id="1" type="priority" x="0.00" y="0.00" incLanes="l0_0" intLanes="" shape="0.00,0.00 0.00,-3.20 0.00,0.00">
+        <request index="0" response="0" foes="0"/>
+    </junction>
+    <junction id="2" type="traffic_light" x="5000.00" y="0.00" incLanes="lm_0 l1_0" intLanes="" shape="5000.00,0.00 5000.00,0.00 5000.00,0.00 5000.00,0.00 5000.00,0.00 5000.00,0.00 5000.00,0.00 5000.00,0.00 5000.00,0.00 5000.00,0.00" customShape="1">
+        <request index="0" response="00" foes="00"/>
+        <request index="1" response="00" foes="00"/>
+    </junction>
+    <junction id="3" type="dead_end" x="3500.00" y="-500.00" incLanes="" intLanes="" shape="3500.00,-500.00 3501.01,-503.04"/>
+    <junction id="4" type="traffic_light" x="5250.00" y="0.00" incLanes="l2_0 l2_1" intLanes="" shape="5250.00,0.00 5250.00,0.00 5250.00,0.00 5250.00,0.00 5250.00,0.00 5250.00,0.00 5250.00,0.00 5250.00,0.00" customShape="1">
+        <request index="0" response="10" foes="10"/>
+        <request index="1" response="00" foes="01"/>
+    </junction>
+    <junction id="5" type="dead_end" x="7750.00" y="0.00" incLanes="l3_0" intLanes="" shape="7750.00,-3.20 7750.00,0.00"/>
+
+    <connection from="l0" to="l1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="l1" to="l2" fromLane="0" toLane="1" tl="2" linkIndex="1" dir="s" state="O"/>
+    <connection from="l2" to="l3" fromLane="0" toLane="0" tl="4" linkIndex="0" dir="s" state="o"/>
+    <connection from="l2" to="l3" fromLane="1" toLane="0" tl="4" linkIndex="1" dir="s" state="O"/>
+    <connection from="lm" to="l2" fromLane="0" toLane="0" tl="2" linkIndex="0" dir="s" state="O"/>
+
+</net>

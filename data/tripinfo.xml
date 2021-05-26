@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 02/15/20 15:22:20 by Eclipse SUMO GUI Version 1.4.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\yao\Dropbox\sumo_platoon\cooperative\data\merge.net.xml"/>
+        <route-files value="C:\Users\yao\Dropbox\sumo_platoon\cooperative\data\cross1.rou.xml"/>
+        <additional-files value="C:\Users\yao\Dropbox\sumo_platoon\cooperative\data\cross.det.xml"/>
+    </input>
+
+    <output>
+        <summary-output value="C:\Users\yao\Dropbox\sumo_platoon\cooperative\data\summary.xml"/>
+        <tripinfo-output value="C:\Users\yao\Dropbox\sumo_platoon\cooperative\data\tripinfo.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+    </time>
+
+    <processing>
+        <route-steps value="200"/>
+        <time-to-teleport value="1000.0"/>
+        <eager-insert value="false"/>
+    </processing>
+
+    <report>
+        <verbose value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <random_number>
+        <random value="false"/>
+    </random_number>
+
+</configuration>
+-->
+
+<tripinfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tripinfo_file.xsd">
+</tripinfos>

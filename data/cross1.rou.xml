@@ -1,0 +1,39 @@
+<routes> 
+        <vType id="auto" color = "1,0,0" accel="0.8" decel="4.5" length="5" minGap="2.0" maxSpeed="22" 
+        carFollowModel='IDM' tau='1.6' speedDev='0'/>
+      
+        <vType id="human" color="0,1,0" accel="0.8" decel="4.5" length="5" minGap="2.0" maxSpeed="22" 
+        carFollowModel='IDM' tau='1.6' speedDev='0'/>
+   
+        <flow id="maf1" from="l0" to="l3" begin="0" end="1000" vehsPerHour="250" departSpeed = "max" type="auto"/>
+            
+        <flow id="mhf1" from="l0" to="l3" begin="0" end="1000" vehsPerHour="250" departSpeed = "max" type="human"/>
+
+        <flow id="raf1" from="lm" to="l3" begin="0" end="6400" vehsPerHour="150" departSpeed = "max" type="auto"/>
+
+        <flow id="rhf1" from="lm" to="l3" begin="0" end="6400" vehsPerHour="150" departSpeed = "max" type="human"/>
+ 
+        <flow id="map1" from="l0" to="l3" begin="1000" end="1600" vehsPerHour="600" departSpeed = "max" type="auto"/>
+
+        <flow id="mhp1" from="l0" to="l3" begin="1000" end="1600" vehsPerHour="600" departSpeed = "max" type="human"/>
+
+        <flow id="maf2" from="l0" to="l3" begin="1600" end="5900" vehsPerHour="250" departSpeed = "max" type="auto"/>
+
+        <flow id="mhf2" from="l0" to="l3" begin="1600" end="5900" vehsPerHour="250" departSpeed = "max" type="human"/>
+
+        <flow id="map2" from="l0" to="l3" begin="5900" end="6500" vehsPerHour="600" departSpeed = "max" type="auto"/>
+
+        <flow id="mhp2" from="l0" to="l3" begin="5900" end="6500" vehsPerHour="600" departSpeed = "max" type="human"/>
+
+        <flow id="rap1" from="lm" to="l3" begin="6400" end="7000" vehsPerHour="450" departSpeed = "max" type="auto"/>
+
+        <flow id="rhp1" from="lm" to="l3" begin="6400" end="7000" vehsPerHour="450" departSpeed = "max" type="human"/>
+
+        <flow id="maf3" from="l0" to="l3" begin="6500" end="10800" vehsPerHour="250" departSpeed = "max" type="auto"/>
+
+        <flow id="mhf3" from="l0" to="l3" begin="6500" end="10800" vehsPerHour="250" departSpeed = "max" type="human"/>
+
+        <flow id="raf2" from="lm" to="l3" begin="7000" end="10800" vehsPerHour="150" departSpeed = "max" type="auto"/>
+
+        <flow id="rhf2" from="lm" to="l3" begin="7000" end="10800" vehsPerHour="150" departSpeed = "max" type="human"/>
+</routes>
